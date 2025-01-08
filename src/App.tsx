@@ -116,7 +116,7 @@ function App() {
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    const githubApiKey = import.meta.env.GITHUB_API_KEY || '';
+    const githubApiKey = import.meta.env.VITE_GITHUB_API_KEY || '';
     fetchData(setUserInfo, setUserRepos, githubApiKey, setLoading);
   }, []);
 
@@ -225,7 +225,7 @@ function App() {
                           </div>
 
                           <h3>Publications</h3>
-                            <div className="groupDetails">
+                            <div className="publicationsGroup">
                                 <a href={hexavalentArticle} target="_blank" rel="noreferrer">× Hexavalent chromium bioadsorption through flamboyant seed biomass</a>
                                 <a href={nasaSEE2020} target="_blank" rel="noreferrer">× NASA Simulation Exploration Experience 2020</a>
                                 <a href={nasaSEE2019} target="_blank" rel="noreferrer">× NASA Simulation Exploration Experience 2019</a>
@@ -257,6 +257,7 @@ function App() {
                           <h2 className="title">Top Repositories</h2>
 
                           <div className="links">
+                              <a href="https://github.com/ThaMoreira/steam-repo" className="link" target="_blank" rel="noreferrer">Perfil steam</a>
                               <a href="https://github.com/ThaMoreira/Angular" className="link" target="_blank" rel="noreferrer">Livro de Receitas</a>
                           </div>
                       </div>

@@ -216,7 +216,7 @@ const SteamDetails = styled.div`
             .group {
                 padding: 1rem 0;
 
-                h3, p, .groupDetails {
+                h3, p, .groupDetails, .publicationsGroup {
                     padding: 1rem;
                     width: 100%;
                     backdrop-filter: blur(20px);
@@ -258,7 +258,7 @@ const SteamDetails = styled.div`
 
                     .badges {
                         padding: 1rem 0rem;
-                        background: var(--transparent-hard);
+                        background: var(--transparent-medium);
                         border-radius: 7px;
                         display: flex;
 
@@ -294,6 +294,23 @@ const SteamDetails = styled.div`
                                 cursor: pointer;
                                 filter: brightness(50%);
                             }
+                        }
+                    }
+                }
+
+                .publicationsGroup {
+                    display: flex;
+                    flex-direction: column;
+                    background: var(--transparent);
+                    margin-bottom: 1rem;
+                        
+                    a {
+                        color: var(--white);
+                        text-decoration: none;
+                        font-size: 1rem;
+                        &:hover {
+                            color: var(--theme);
+                            text-decoration: underline;
                         }
                     }
                 }
